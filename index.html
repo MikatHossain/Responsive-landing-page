@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>landing page</title>
+  </head>
+  <body>
+
+    <!-- navbar start -->
+    <nav class="flex justify-between p-3 bg-white/40 items-center fixed top-0 left-0 right-0 z-20 shadow-md">
+
+      <!-- brand -->
+      <a href="" id="brand" class="flex items-center flex-1">
+        <img
+          src="./assets/asset 0.png"
+          alt="logo"
+          class="object-cover max-w-12 max-h-12"
+        />
+        <span class="font-semibold text-lg pl-2 font-display">ToDesktop</span>
+      </a>
+
+      <!-- desktop nav -->
+      <div class="hidden lg:flex gap-12 ">
+        <a href="#" class="text-[18px] font-medium hover:text-primary"
+          >Pricing</a
+        >
+        <a href="#" class="text-[18px] font-medium hover:text-primary">Docs</a>
+        <a href="#" class="text-[18px] font-medium hover:text-primary"
+          >ChangeLog</a
+        >
+        <a href="#" class="text-[18px] font-medium hover:text-primary">Blog</a>
+        <a href="#" class="text-[18px] font-medium hover:text-primary">Login</a>
+      </div>
+
+      <div class="flex-1 lg:flex hidden justify-end">
+        <button
+          class="hover:border-gray-500 flex md:gap-2 transition-all duration-500 md:items-center border rounded-md py-2 px-4"
+        >
+          <img src="assets/asset 1.svg" alt="" />
+          Electron developers
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+      </div>
+
+      <!-- mobile nav -->
+      <div class="fixed z-10 hidden bg-white lg:hidden inset-0 p-3" id="mobile-nav">
+        <div class="flex justify-between">
+          <a href="" id="brand" class="flex items-center">
+            <img
+              src="./assets/asset 0.png"
+              alt="logo"
+              class="object-cover max-w-12 max-h-12"
+            />
+            <span class="font-semibold text-lg pl-2 font-display"
+              >ToDesktop</span
+            >
+          </a>
+
+          <button class="p-2 bg-white lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+          </button>
+        </div>
+
+        <div class="mt-6 ">
+          <a
+            href="#"
+            class="hover:bg-gray-100 block text-[18px] font-medium m3 p-2 rounded-lg"
+            >Pricing</a
+          >
+
+          <a
+            href="#"
+            class="hover:bg-gray-100 block text-[18px] font-medium m3 p-2 rounded-lg"
+            >Docs</a
+          >
+          <a
+            href="#"
+            class="hover:bg-gray-100 block text-[18px] font-medium m3 p-2 rounded-lg"
+            >ChangeLog</a
+          >
+          <a
+            href="#"
+            class="hover:bg-gray-100 block text-[18px] font-medium m3 p-2 rounded-lg"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="hover:bg-gray-100 block text-[18px] font-medium m3 p-2 rounded-lg"
+            >Login</a
+          >
+        </div>
+        <div class="h-[1px] bg-gray-300"></div>
+
+        <button
+          class="hover:bg-gray-100 mt-6 items-center flex gap-2 rounded-md py-2 px-4 w-full"
+        >
+          <img src="assets/asset 1.svg" alt="" />
+          Electron developers
+        </button>
+      </div>
+
+      <!-- mobile menu icon -->
+      <button class="p-2 lg:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-gray-600"></i>
+      </button>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- main start -->
+    <main>
+
+      <!-- hero section start -->
+      <section>
+        <div
+          class="mt-16 bg-gradient-to-b from-purple-50 via-orange-50 to-transparent"
+        >
+          <div
+            class="max-w-4xl sm:space-y-12 mx-auto px-6 pt-6 pb-32 flex flex-col sm:items-center sm:text-center"
+          >
+            <div
+              id="version-text"
+              class="flex my-6 gap-2 items-center border border-yellow-300 bg-yellow-50 rounded-lg px-3 py-1 w-fit group hover:shadow-lg shadow-md hover:-translate-y-1 transition-all duration-300"
+            >
+              <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+              <p class="font-display font-medium text-yellow-600">v0.24.1</p>
+              <i
+                class="fa-solid fa-arrow-right-long text-yellow-600 group-hover:translate-x-1 duration-300 transition-all"
+              ></i>
+            </div>
+            <div class="flex flex-col gap-2 sm:flex-row sm:gap-6 text-gray-400">
+              <p class="flex gap-2">
+                <img src="./assets/asset 62.svg" alt="" />
+                Code optional
+              </p>
+              <p class="flex gap-2">
+                <img src="./assets/asset 63.svg" alt="" />
+                Drag & drop builder
+              </p>
+              <p class="flex gap-2">
+                <img src="./assets/asset 64.svg" alt="" />
+                Windows, Mac, Linux
+              </p>
+            </div>
+            <h1 class="text-4xl sm:text-7xl mt-4 font-semibold leading-snug">
+              Web app to desktop app in minutes
+            </h1>
+            <p
+              class="text-xl sm:leading-normal sm:text-2xl sm:mt-6 mt-4 text-gray-800"
+            >
+              Take your web app codebase and transform it into a cross platform
+              desktop app with native functionality.
+            </p>
+            <div class="mt-12 flex flex-col sm:flex-row gap-4">
+              <button
+                class="px-8 py-3 font-semibold rounded-lg text-white bg-primary shadow-sm hover:bg-opacity-90"
+              >
+                Download now
+              </button>
+              <button
+                class="px-8 py-3 font-semibold rounded-lg bg-white border border-gray-400 shadow-sm hover:border-gray-900"
+              >
+                Read docs
+              </button>
+            </div>
+          </div>
+
+          <!-- companies logo part -->
+
+          <div class="flex flex-col gap-8">
+
+            <!-- title -->
+            <div class="flex justify-center gap-2">
+              <img src="./assets/asset 2.svg" alt="" class="translate-y-4" />
+              <span class="font-medium"> Apps powered by ToDesktop</span>
+              <img
+                src="./assets/asset 2.svg"
+                alt=""
+                class="translate-y-4 -scale-x-100"
+              />
+            </div>
+
+            <!-- company logos -->
+            <div id="lines-group" class="flex flex-col gap-4 animate-lines">
+              
+              <!-- line 1 -->
+              <div
+                id="line1"
+                class="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear"
+              >
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 4.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 6.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 8.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 9.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 5.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 8.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 9.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 5.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 8.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 9.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 5.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+              </div>
+
+              <!-- line 2 -->
+
+              <div
+                id="line2"
+                class="flex gap-4 w-screen -translate-x-36 transition-transform ease-linear"
+              >
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 8.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 7.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 9.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 8.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 7.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 9.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 8.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 7.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 9.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 10.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 11.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 12.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 15.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 19.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+              </div>
+
+              <!-- line 3 -->
+              <div
+                id="line3"
+                class="flex gap-4 w-screen -translate-x-32 transition-transform ease-linear md:hidden"
+              >
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 8.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 9.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 5.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 10.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 8.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 9.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 5.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 8.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 14.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 15.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 11.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 7.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+                <div
+                  class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl"
+                >
+                  <img
+                    src="./assets/asset 3.png"
+                    alt=""
+                    class="w-12 h-12 md:w-16 md:h-16"
+                  />
+                  <span class="text-[12px] md:text-[16px] font-semibold"
+                    >Unbounce</span
+                  >
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- hero section end -->
+
+      <!-- work section start -->
+      <section class="">
+        <div
+          class="container"
+        >
+          <h2 class="text-5xl sm:font-semibold" id="heading">How it works</h2>
+
+          <!-- step 1 -->
+          <div class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row">
+            <!-- text -->
+            <div class="flex flex-col gap-6 lg:w-1/2">
+              <span
+                class="border border-yellow-300 text-yellow-800 bg-yellow-50 px-3 py-1 rounded-lg font-medium w-fit font-display"
+              >
+                Step 1
+              </span>
+              <h3 class="text-4xl">Bootstrap straight from your web app</h3>
+              <p class="text-lg font-light">
+                No need to create a new repository, just add code from our
+                desktop APIs to your codebase and get access to system level
+                functionality.
+              </p>
+              <ul class="grid grid-cols-2 gap-2">
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Multiple windows</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Customisable menus</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Menubar/tray menus</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Launch on startup</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Offline support</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Tabs (Mac only)</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- image -->
+            <div class="pt-12 lg:w-1/2 animate-imageY">
+              <img src="./assets/asset 66.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- step 2 -->
+
+          <div class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row">
+            <!-- text -->
+            <div class="flex flex-col gap-6 lg:w-1/2">
+              <span
+                class="border border-yellow-300 text-yellow-800 bg-yellow-50 px-3 py-1 rounded-lg font-medium w-fit font-display"
+              >
+                Step 2
+              </span>
+              <h3 class="text-4xl">Bootstrap straight from your web app</h3>
+              <p class="text-lg font-light">
+                No need to create a new repository, just add code from our
+                desktop APIs to your codebase and get access to system level
+                functionality.
+              </p>
+              <ul class="grid grid-cols-2 gap-2">
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Multiple windows</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Customisable menus</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Menubar/tray menus</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Launch on startup</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Offline support</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Tabs (Mac only)</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- image -->
+            <div class="pt-12 lg:w-1/2 animate-imageY">
+              <img src="./assets/asset 66.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- step 3 -->
+          <div class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row">
+            <!-- text -->
+            <div class="flex flex-col gap-6 lg:w-1/2">
+              <span
+                class="border border-yellow-300 text-yellow-800 bg-yellow-50 px-3 py-1 rounded-lg font-medium w-fit font-display"
+              >
+                Step 3
+              </span>
+              <h3 class="text-4xl">Bootstrap straight from your web app</h3>
+              <p class="text-lg font-light">
+                No need to create a new repository, just add code from our
+                desktop APIs to your codebase and get access to system level
+                functionality.
+              </p>
+              <ul class="grid grid-cols-2 gap-2">
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Multiple windows</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Customisable menus</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Menubar/tray menus</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Launch on startup</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Offline support</a
+                  >
+                </li>
+                <li class="flex gap-4 items-center">
+                  <i class="fa-solid fa-check"> </i>
+                  <a
+                    href=""
+                    class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80"
+                    >Tabs (Mac only)</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- image -->
+            <div class="pt-12 lg:w-1/2 animate-imageY">
+              <img src="./assets/asset 66.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- work section end -->
+
+      <!-- vento grid start -->
+      <section>
+        <div class="container">
+          <h2 class="text-5xl sm:font-semibold mb-8 animate-heading-LTR">
+            ToDesktop handles the details
+          </h2>
+
+          <div
+            id="grid-container"
+            class="flex flex-col gap-6 lg:grid lg:grid-cols-3"
+            style="grid-auto-rows: 96px"
+          >
+            <!-- item 1 -->
+            <div class="row-start-1 row-end-3 gradient-hover-outer group">
+              <div class="gradient-hover-inner">
+                <h3 class="text-2xl">Native Notifications</h3>
+                <img src="./assets/asset 37.png" alt="" />
+              </div>
+            </div>
+
+            <!-- item 2 -->
+
+            <div class="row-start-1 row-end-4 gradient-hover-outer group">
+              <div class="gradient-hover-inner">
+                <h3 class="text-2xl">Auto Updates</h3>
+                <p class="text-lg text-center font-light">
+                  We’ll ensure the underlying browser is up to date and deliver
+                  performance improvements, security patches, & additional
+                  features.
+                </p>
+                <img src="./assets/asset 38.png" alt="" />
+              </div>
+            </div>
+
+            <!-- item 3 -->
+            <div class="row-start-1 row-end-3 gradient-hover-outer group">
+              <div class="gradient-hover-inner">
+                <h3 class="text-2xl">Plugins</h3>
+                <img src="./assets/asset 39.png" alt="" />
+              </div>
+            </div>
+
+            <!-- item 4-->
+            <div class="row-start-3 row-end-6 gradient-hover-outer group">
+              <div class="gradient-hover-inner">
+                <h3 class="text-2xl">Access to Native APIs</h3>
+                <p class="text-lg text-center font-light">
+                  We’ll ensure the underlying browser is up to date and deliver
+                  performance improvements, security patches, & additional
+                  features.
+                </p>
+                <img src="./assets/asset 40.png" alt="" />
+              </div>
+            </div>
+
+            <!-- item 5 -->
+            <div class="row-start-4 row-end-6 gradient-hover-outer group">
+              <div class="gradient-hover-inner">
+                <h3 class="text-2xl">Customizable look and feel</h3>
+                <img src="./assets/asset 41.png" alt="" />
+              </div>
+            </div>
+
+            <!-- item 6 -->
+            <div class="row-start-3 row-end-6 gradient-hover-outer group">
+              <div class="gradient-hover-inner">
+                <h3 class="text-2xl">Native Installers</h3>
+                <p class="text-lg text-center font-light">
+                  We’ll ensure the underlying browser is up to date and deliver
+                  performance improvements, security patches, & additional
+                  features.
+                </p>
+                <img src="./assets/asset 43.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- company feature line -->
+          <div class="max-w-7xl mx-auto">
+            <div
+              class="border rounded-lg flex justify-center p-4 overflow-hidden"
+            >
+              <div id="line4" class="flex gap-8 p-6">
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Offline Support
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Download analytics
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Launch at Startup
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Download analytics
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Download analytics
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Launch at Startup
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Deep Linking
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Multi-window support
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Custom Menus
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Download analytics
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <h3
+                    class="my-0 mx-2 text-2xl font-semibold whitespace-nowrap"
+                  >
+                    Global Hotkeys
+                  </h3>
+                  <div class="w-3 h-3 bg-slate-300 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- vento grid end -->
+
+      <!-- testimonials start-->
+      <section>
+        <div class="container">
+          <h2 class="text-5xl sm:font-semibold mb-12">Customer stories</h2>
+
+          <div class="flex flex-col gap-12">
+            <!-- top -->
+            <div
+              class="flex flex-col lg:flex-row items-end rounded-xl border p-[1px]"
+            >
+              <!--left text -->
+              <div class="lg:w-1/2 flex flex-col gap-8 lg:p-12 p-8 lg:pr-0">
+                <div>
+                  <img src="./assets/asset 44.svg" alt="" />
+                </div>
+                <h3 class="font-semibold text-2xl leading-relaxed">
+                  ClickUp used ToDesktop to get their desktop app in front of
+                  customers in days instead of months.
+                </h3>
+
+                <!-- tags -->
+                <div class="flex gap-4 flex-wrap">
+                  <div
+                    class="flex items-center px-3 py-1 gap-2 bg-[#fff6cc] border border-yellow-300 w-fit rounded-md text-yellow-700"
+                  >
+                    <i class="fa-solid fa-check"></i>
+                    <p class="font-display font-medium">Chromeless UI</p>
+                  </div>
+                  <div
+                    class="flex items-center px-2 py-1 gap-2 bg-[#fff6cc] border border-yellow-700 w-fit rounded-lg"
+                  >
+                    <i class="fa-solid fa-check"></i>
+                    <p class="font-semibold text-[#665300]">
+                      Native spellcheck
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center px-2 py-1 gap-2 bg-[#fff6cc] border border-yellow-700 w-fit rounded-lg"
+                  >
+                    <i class="fa-solid fa-check"></i>
+                    <p class="font-semibold text-[#665300]">
+                      Task time in menubar
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center px-2 py-1 gap-2 bg-[#fff6cc] border border-yellow-700 w-fit rounded-lg"
+                  >
+                    <i class="fa-solid fa-check"></i>
+                    <p class="font-semibold text-[#665300]">
+                      Notification count in the dock
+                    </p>
+                  </div>
+                  <div
+                    class="flex items-center px-2 py-1 gap-2 bg-[#fff6cc] border border-yellow-700 w-fit rounded-lg"
+                  >
+                    <i class="fa-solid fa-check"></i>
+                    <p class="font-semibold text-[#665300]">
+                      Global hotkey to create task
+                    </p>
+                  </div>
+                </div>
+
+                <p class="text-slate-400 text-xl">
+                  “ToDesktop provided us with a
+                  <span class="text-black"> polished desktop app </span> in no
+                  time. Their expert team guided us through a smooth migration
+                  from our outdated legacy desktop app, enabling us to deliver
+                  new and improved features to our customers within days.”
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <div class="flex gap-2">
+                    <img
+                      src="./assets/asset 45.jpeg"
+                      alt=""
+                      class="rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-xl">Mikat Hossain</h5>
+                    <p class="text-slate-400">
+                      Founder & CEO, <a href="" class="underline">ClickUp</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!--right image -->
+              <div class="lg:w-1/2">
+                <img src="./assets/asset 46.png" alt="" class="pl-12" />
+              </div>
+            </div>
+
+            <!-- testimonials cart -->
+            <div class="flex flex-col lg:flex-row justify-between gap-4">
+              <!-- cart 1 -->
+              <div class="gradient-hover-outer group">
+                <div class="gradient-hover-inner items-start">
+                  <div class="flex items-center gap-4 rounded-2xl">
+                    <div
+                      class="w-12 h-12 bg-blue-200 flex justify-center items-center rounded-full"
+                    >
+                      <i class="fa-solid fa-code text-indigo-800"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold">Native APIs</h3>
+                  </div>
+
+                  <p class="text-lg font-light">
+                    “What sets ToDesktop apart is its seamless integration with
+                    native APIs using our existing web codebase. By tapping into
+                    APIs like Tray and Notifications, we've crafted an
+                    exceptionally polished desktop user experience. ”
+                  </p>
+                  <div class="flex gap-4">
+                    <div class="flex">
+                      <div
+                        class="-mr-3 flex w-12 h-12 rounded-full justify-center items-center overflow-hidden border border-white"
+                      >
+                        <img
+                          src="./assets/asset 47.png"
+                          alt=""
+                          class="min-w-16 min-h-16"
+                        />
+                      </div>
+
+                      <div
+                        class="w-12 h-12 border border-white rounded-full overflow-hidden"
+                      >
+                        <img src="./assets/asset 48.jpeg" alt="" />
+                      </div>
+                    </div>
+                    <div class="flex flex-col w-fit">
+                      <h3 class="font-semibold">Mikat hossain</h3>
+                      <a href="#" class="underline text-gray-500">Rise</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- cart 2 -->
+              <div class="gradient-hover-outer group">
+                <div class="gradient-hover-inner items-start">
+                  <div class="flex items-center gap-4 rounded-2xl">
+                    <div
+                      class="w-12 h-12 bg-blue-200 flex justify-center items-center rounded-full"
+                    >
+                      <i class="fa-solid fa-code text-indigo-800"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold">Code optional</h3>
+                  </div>
+
+                  <p class="text-lg font-light">
+                    “What sets ToDesktop apart is its seamless integration with
+                    native APIs using our existing web codebase. By tapping into
+                    APIs like Tray and Notifications, we've crafted an
+                    exceptionally polished desktop user experience. ”
+                  </p>
+                  <div class="flex gap-4">
+                    <div class="flex">
+                      <div
+                        class="-mr-3 flex w-12 h-12 rounded-full justify-center items-center overflow-hidden border border-white"
+                      >
+                        <img
+                          src="./assets/asset 47.png"
+                          alt=""
+                          class="min-w-16 min-h-16"
+                        />
+                      </div>
+
+                      <div
+                        class="w-12 h-12 border border-white rounded-full overflow-hidden"
+                      >
+                        <img src="./assets/asset 48.jpeg" alt="" />
+                      </div>
+                    </div>
+                    <div class="flex flex-col w-fit">
+                      <h3 class="font-semibold">Mikat hossain</h3>
+                      <a href="#" class="underline text-gray-500">Rise</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- cart 3 -->
+              <div class="gradient-hover-outer group">
+                <div class="gradient-hover-inner items-start">
+                  <div class="flex items-center gap-4 rounded-2xl">
+                    <div
+                      class="w-12 h-12 bg-blue-200 flex justify-center items-center rounded-full"
+                    >
+                      <i class="fa-solid fa-code text-indigo-800"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold">
+                      Cleaner, less cluttered UI
+                    </h3>
+                  </div>
+
+                  <p class="text-lg font-light">
+                    “What sets ToDesktop apart is its seamless integration with
+                    native APIs using our existing web codebase. By tapping into
+                    APIs like Tray and Notifications, we've crafted an
+                    exceptionally polished desktop user experience. ”
+                  </p>
+                  <div class="flex gap-4">
+                    <div class="flex">
+                      <div
+                        class="-mr-3 flex w-12 h-12 rounded-full justify-center items-center overflow-hidden border border-white"
+                      >
+                        <img
+                          src="./assets/asset 47.png"
+                          alt=""
+                          class="min-w-16 min-h-16"
+                        />
+                      </div>
+
+                      <div
+                        class="w-12 h-12 border border-white rounded-full overflow-hidden"
+                      >
+                        <img src="./assets/asset 48.jpeg" alt="" />
+                      </div>
+                    </div>
+                    <div class="flex flex-col w-fit">
+                      <h3 class="font-semibold">Mikat hossain</h3>
+                      <a href="#" class="underline text-gray-500">Rise</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- promotion -->
+            <div
+              class="flex flex-col lg:flex-row mt-6 rounded-xl bg-black gap-8 promotion-bg"
+            >
+              <!--left text -->
+              <div class="lg:w-1/2 flex justify-center flex-col gap-8 px-16">
+                <h5
+                  class="text-white text-2xl uppercase font-display font-medium text-center lg:text-left leading-snug"
+                >
+                  Ready to start building?
+                </h5>
+                <h2 class="text-white font-semibold lg:text-4xl text-lg text-center lg:text-left leading-relaxed">
+                  Create your desktop app for free*
+                </h2>
+
+                <p class="text-slate-400 text-xl">
+                  ToDesktop Builder will take you step-by-step through the
+                  process of creating your first desktop app in just a few
+                  minutes.
+                </p>
+
+                <button
+                  class="flex gap-2 items-center w-fit rounded-lg bg-primary text-white lg:text-xl text-sm whitespace-nowrap py-3 px-5 font-semibold"
+                >
+                  <i class="fa-solid fa-download"></i>
+                  <span>Download ToDesktop Builder</span>
+                </button>
+
+                <p class="text-slate-500">
+                  *You can create a desktop app and run it on your computer for
+                  free. You will only be charged if you want to create a
+                  distributable app for your customers.
+                </p>
+              </div>
+              <!--right image -->
+              <div class="lg:w-1/2 flex flex-col items-end">
+                <img
+                  src="./assets/asset 46.png"
+                  alt=""
+                  class="pl-12 lg:pt-12"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- testimonials end-->
+
+      <!-- pricing section start-->
+      <section>
+        <div class="container">
+          <div>
+            <!-- heading -->
+            <div class="flex flex-col lg:flex-row">
+              <h2
+                class="text-5xl font-semibold leading-normal mb-12 font-display max-w-2xl"
+              >
+                Choose a plan that fits your needs
+              </h2>
+              <div class="flex"></div>
+            </div>
+
+            <!-- pricing cart -->
+            <div class="grid grid-cols-1 md:grid-cols-3 mt-6 gap-6">
+              <!-- cart 1 -->
+              <div
+                class="border rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 bg-slate-50"
+              >
+                <h3 class="text-4xl">Free</h3>
+                <p class="text-lg font-light">
+                  For personal use or testing your app before deploying to
+                  customers.
+                </p>
+                <p class="capitalize">Key Features</p>
+
+                <ul class="text-gray-500 flex flex-col gap-4">
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Free for personal use</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Run app locally</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>No Code Signing</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>No Code Signing</span>
+                  </li>
+                </ul>
+
+                <button
+                  class="border rounded-lg py-4 text-lg text-primary hover:border-slate-600"
+                >
+                  Get Started
+                </button>
+              </div>
+
+              <!-- cart 2 -->
+              <div
+                class="border rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 bg-slate-50"
+              >
+                <h3 class="text-4xl">Essential</h3>
+                <p class="text-lg font-light">For simple desktop apps.</p>
+                <p class="font-bold text-xl">
+                  $100 <span class="font-light">/month</span>
+                </p>
+                <p class="capitalize">Key Features</p>
+
+                <ul class="text-gray-500 flex flex-col gap-4">
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Free for personal use</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Run app locally</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>No Code Signing</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>No Code Signing</span>
+                  </li>
+                </ul>
+
+                <button
+                  class="border rounded-lg py-4 text-lg text-primary hover:border-slate-600"
+                >
+                  Get Started
+                </button>
+              </div>
+
+              <!-- cart 3 -->
+              <div
+                class="border relative rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 bg-slate-50"
+              >
+                <div
+                  class="py-2 px-4 font-semibold absolute -translate-y-1/2 right-8 top-0 text-primary rounded-full w-fit bg-[#D5DDFF]"
+                >
+                  Most popular
+                </div>
+                <h3 class="text-4xl">Professional</h3>
+                <p class="text-lg font-light">
+                  For sophisticated desktop apps.
+                </p>
+                <p class="font-bold text-xl">
+                  $240 <span class="font-light">/month</span>
+                </p>
+                <p class="capitalize">Key Features</p>
+
+                <ul class="text-gray-500 flex flex-col gap-4">
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Free for personal use</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Run app locally</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>No Code Signing</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>No Code Signing</span>
+                  </li>
+                </ul>
+
+                <button
+                  class="border rounded-lg py-4 text-lg text-white bg-primary hover:border-slate-600"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+            <!-- pricing cart end -->
+          </div>
+        </div>
+      </section>
+      <!-- pricing section end-->
+
+      <!-- FAQs start -->
+      <section>
+        <div class="container">
+          <h2
+            class="text-5xl font-semibold leading-normal mb-12 font-display max-w-2xl"
+          >
+            FAQs
+          </h2>
+          <div class="grid grid-cols-1 items-start lg:grid-cols-2 gap-6">
+            <!-- faq 1 -->
+            <div
+              class="group cursor-pointer rounded-xl border border-gray-200 p-6 bg-gray-50"
+            >
+              <dt
+                class="flex items-center justify-between"
+                aria-controls="faq-1"
+              >
+                <p class="font-semibold text-lg">Is ToDesktop For Me?</p>
+                <i class="fa-solid fa-chevron-down transition-transform"></i>
+              </dt>
+              <dd class="hidden text-lg font-light mt-6" id="faq-1">
+                <p class="">
+                  That depends! If you would like to distribute your web app to
+                  your users as a downloadable desktop app then ToDesktop is for
+                  you.
+                </p>
+                <p class="text-lg font-light mt-6">
+                  That depends! If you would like to distribute your web app to
+                  your users as a downloadable desktop app then ToDesktop is for
+                  you.
+                </p>
+              </dd>
+            </div>
+
+            <!-- faq-2 -->
+            <div
+              class="group cursor-pointer rounded-xl border border-gray-200 p-6 bg-gray-50"
+            >
+              <dt
+                class="flex items-center justify-between"
+                aria-controls="faq-2"
+              >
+                <p class="font-semibold text-lg">Is ToDesktop For Me?</p>
+                <i class="fa-solid fa-chevron-down transition-transform"></i>
+              </dt>
+              <dd class="hidden text-lg font-light mt-6" id="faq-2">
+                <p class="">
+                  That depends! If you would like to distribute your web app to
+                  your users as a downloadable desktop app then ToDesktop is for
+                  you.
+                </p>
+                <p class="text-lg font-light mt-6">
+                  That depends! If you would like to distribute your web app to
+                  your users as a downloadable desktop app then ToDesktop is for
+                  you.
+                </p>
+              </dd>
+            </div>
+
+            <!-- faq-3 -->
+            <div
+              class="group cursor-pointer rounded-xl border border-gray-200 p-6 bg-gray-50"
+            >
+              <dt
+                class="flex items-center justify-between"
+                aria-controls="faq-3"
+              >
+                <p class="font-semibold text-lg">Is ToDesktop For Me?</p>
+                <i class="fa-solid fa-chevron-down transition-transform"></i>
+              </dt>
+              <dd class="hidden text-lg font-light mt-6" id="faq-3">
+                <p class="">
+                  That depends! If you would like to distribute your web app to
+                  your users as a downloadable desktop app then ToDesktop is for
+                  you.
+                </p>
+                <p class="text-lg font-light mt-6">
+                  That depends! If you would like to distribute your web app to
+                  your users as a downloadable desktop app then ToDesktop is for
+                  you.
+                </p>
+              </dd>
+            </div>
+            <!-- faq-4 -->
+            <div
+              class="group cursor-pointer rounded-xl border border-gray-200 p-6 bg-gray-50"
+            >
+              <dt
+                class="flex items-center justify-between"
+                aria-controls="faq-4"
+              >
+                <p class="font-semibold text-lg">Is ToDesktop For Me?</p>
+                <i class="fa-solid fa-chevron-down transition-transform"></i>
+              </dt>
+              <dd class="hidden text-lg font-light mt-6" id="faq-4">
+                <p class="">
+                  That depends! If you would like to distribute your web app to
+                  your users as a downloadable desktop app then ToDesktop is for
+                  you.
+                </p>
+              </dd>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQs end -->
+    </main>
+    <!-- main end -->
+
+    <footer>
+      <div class="container">
+        <div
+          class="rounded-lg border lg:border-none bg-gray-50 items-center px-8 py-8 gap-8 flex flex-col lg:flex-row-reverse"
+        >
+          <a href="" class="font-display">Documentation</a>
+          <div class="flex gap-8">
+            <a href="">
+              <i
+                class="fa-brands fa-twitter text-gray-600 hover:text-gray-900"
+              ></i>
+            </a>
+            <a href="">
+              <i
+                class="fa-brands fa-github text-gray-600 hover:text-gray-900"
+              ></i>
+            </a>
+          </div>
+
+          <a href="" id="brand" class="flex items-center flex-1">
+            <img
+              src="./assets/asset 0.png"
+              alt="logo"
+              class="object-cover max-w-12 max-h-12"
+            />
+            <span class="font-semibold text-lg pl-2 font-display"
+              >ToDesktop</span
+            >
+          </a>
+        </div>
+        <!-- sub footer -->
+        <div
+          class="flex items-center gap-2 justify-center flex-col lg:flex-row"
+        >
+          <div class="flex gap-2 items-center">
+            <img src="./assets/asset 54.svg" alt="" class="w-4 h-4" />
+            <p>A Y Combinator company.</p>
+          </div>
+          <p class="text-sm text-gray-600">
+            © 2024 ToDesktop, Inc. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

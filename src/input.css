@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html,body{
+        overflow-x: hidden;
+    }
+    body{
+        @apply font-body
+    }
+    h1,h2, h3{
+        @apply font-display text-gray-800 font-medium
+    }
+    .container {
+        @apply px-6 max-w-7xl mt-8 mx-auto py-12 lg:px-8 lg:mt-8 space-y-12
+    }
+ 
+    .animate-heading-LTR{
+        animation: heading-LTR 1s ease-out forwards;
+    }
+    .animate-imageY {
+        animation: imageY 5s ease-in-out infinite ;
+    }
+    .animate-lines{
+        animation: lines 0.5s ease-in forwards ;
+
+    }
+    .promotion-bg{
+        background-image: url("/assets/asset 67.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+    }
+}
+
+@layer components {
+    .gradient-hover-outer{
+        @apply rounded-2xl hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 bg-slate-200 p-[1px] 
+    }
+    .gradient-hover-inner{
+        @apply bg-slate-50 rounded-2xl w-full h-full p-6 flex flex-col items-center group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 gap-6
+    }
+}
+
+@keyframes lines{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heading-LTR {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(100px);
+    }
+    75% {
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes imageY {
+    0%{
+        transform: translateY(0);
+    }
+    
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+}
